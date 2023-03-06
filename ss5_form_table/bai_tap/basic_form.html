@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form co ban 1</title>
+</head>
+<body>
+<center>
+<h1>SỞ THÍCH CỦA BẠN</h1>
+</center>
+<form action="www.google.com" method="get">
+    Họ và tên:
+    <input type="text" name="hovaten"><br>
+    Email:
+    <input type="text" name="email"><br>
+    Sở thích:
+    <div style="display: flex">
+    <input type="checkbox" name="sothich" value="thethao">thể thao
+    <input type="checkbox" name="sothich" value="amnhac">âm nhạc
+    <input type="checkbox" name="sothich" value="docsach">đọc sách<br>
+    <input type="checkbox" name="sothich" value="luotweb">lướt web
+    <input type="checkbox" name="sothich" value="choigame">chơi game
+    <input type="checkbox" name="sothich" value="dienanh">điện ảnh<br>
+    <input type="checkbox" name="sothich" value="dulich">du lịch<br>
+    </div>
+    <input type="submit" value="gửi đi">
+    <input type="reset" value="nhập lại">
+
+
+</form>
+<center>
+<h1>ĐĂNG KÍ HỌC VIÊN</h1>
+</center>
+<form action="google.com" method="post">
+    Họ và tên
+    <input type="text" name="name"><br>
+    Ngày sinh
+    <input type="date" name="dateofbirth"><br>
+    Giới tính
+    <input type="radio" name="gender" value="male">Nam
+    <input type="radio" name="gender" value="female">Nữ<br>
+    Địa chỉ
+    <textarea cols="30" rows="5"></textarea><br>
+    Lớp
+    <select name="class">
+        <option>-chọn lớp-</option>
+        <option value="gioi">lớp giỏi</option>
+        <option value="kha">lớp khá</option>
+        <option value="trungbinh">lớp TB</option>
+        <option value="ngu">lớp ngu</option>
+    </select>
+    Email
+    <input type="text" name="email"><br>
+    Điện thoại
+    <input type="number" name="telephonenumber"><br>
+    <input type="submit" value="Đăng kí">
+    <input type="reset" value="Nhập lại">
+</form>
+</body>
+</html>
