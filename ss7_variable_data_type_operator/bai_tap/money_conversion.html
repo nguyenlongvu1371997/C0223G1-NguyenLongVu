@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>money_conversion</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Amount</th>
+        <th>From currency</th>
+        <th>To currency</th>
+    </tr>
+    <tr>
+        <td><input type="number" value="1" id="tien1"></td>
+        <td>
+            <select id="from">
+                <option>VietNam</option>
+                <option>USA</option>
+            </select>
+        </td>
+        <td>
+            <select id="to">
+                <option>VietNam</option>
+                <option>USA</option>
+            </select>
+        </td>
+        <td><button onclick="doitien()">Convert</button></td>
+    </tr>
+</table>
+<p id="tien2"></p>
+<script>
+    function doitien() {
+        let tien = document.getElementById('tien1').value;
+        let from = document.getElementById('from').value;
+        let to = document.getElementById('to').value;
+        let bien;
+        if (from=="VietNam" && to=="USA") {
+            bien = tien/24000+"$";
+        }
+        else if (from=="VietNam" && to=="VietNam") {
+            bien = tien+"Dong";
+        }
+        else if (from=="USA" && to=="USA") {
+            bien = tien+"$";
+        }
+        else if (from=="USA" && to=="VietNam") {
+            bien = tien*24000+"Dong";
+        }
+        document.getElementById("tien2").innerHTML =bien;
+
+    }
+</script>
+
+</body>
+</html>
