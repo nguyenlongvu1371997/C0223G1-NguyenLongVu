@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bien_kieu_du_lieu_toan_tu</title>
+</head>
+<body>
+<h2><center>tính điểm trung bình</center></h2>
+Điểm Lí<input type="number" id="phy"><br>
+Điểm Toán<input type="number" id="math"><br>
+Điểm Sinh<input type="number" id="bio"><br>
+<button type="button" onclick="cl()"></button>
+<script>
+    function cl(){
+        let phy = document.getElementById("phy").value*1;
+        let math = document.getElementById("math").value*1;
+        let bio = document.getElementById("bio").value*1;
+        let tb = (phy+math+bio)/3
+        alert(tb)
+
+    }
+</script>
+</body>
+</html>
