@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>weight_body</title>
+</head>
+<body>
+<script>
+    let w = prompt("nhập cân nặng của bạn (kg)")*1;
+    let h = prompt("nhập chiều cao của bạn (m)")*1;
+    let bmi = w/(Math.pow(h, 2));
+    alert(bmi);
+       if (bmi<18.5) {
+        alert("underweight");
+    } else if (bmi<25) {
+        alert("normal");
+    } else if (bmi<30) {
+        alert("overweight");
+    } else {
+        alert("obese");
+    }
+</script>
+
+</body>
+</html>

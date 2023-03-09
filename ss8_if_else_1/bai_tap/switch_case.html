@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>switch_case</title>
+</head>
+<body>
+<input type="number" id="tinh"><button onclick="tinhsongay()">Tính số ngày</button>
+<script>
+    function tinhsongay() {
+        let thang=document.getElementById('tinh').value*1;
+        switch (thang) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                alert("31 ngày");
+                break
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                alert("30 ngày");
+                break
+            case 2:
+                let nam = prompt("nhập năm");
+                if (nam%400==0) {
+                    alert("29 ngày")
+                } else if (nam%4==0 && nam%100!=0) {
+                    alert("29 ngày");
+                } else {
+                    alert("28 ngày");
+                }
+                break
+            default:
+                alert("nhập sai cmnr")
+        }
+
+    }
+</script>
+
+</body>
+</html>
