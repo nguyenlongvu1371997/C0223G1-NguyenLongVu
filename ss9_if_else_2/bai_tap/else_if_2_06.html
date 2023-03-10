@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>phuong_trinh_bac_nhat</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập hệ số trước x")*1;
+    let b = prompt("nhập hệ số tự do")*1;
+    if (a==0 && b==0) {
+        alert("phương trình vô số nghiệm");
+    } else if ( a==0 ) {
+        alert("phương trình vô nghiệm");
+    } else if (a>0||a<0) {
+        let nghiem = -b/a;
+        alert ("nghiệm của phương trình là "+nghiem)
+    } else {
+        alert("bạn nhập lộn rồi");
+    }
+</script>
+
+</body>
+</html>

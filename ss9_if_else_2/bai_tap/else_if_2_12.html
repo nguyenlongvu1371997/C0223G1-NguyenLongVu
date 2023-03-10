@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lai_ngan_hang</title>
+</head>
+<body>
+<script>
+    let tien = prompt("nhập số tiền bạn vay vào đây") * 1;
+    let thang = parseInt(prompt("nhập số tháng bạn vay"));
+    let lai = prompt("nhập lãi xuất vào")*1;
+    if (tien > 0 && thang > 0 && lai > 0) {
+        let tienTra = tien * Math.pow((1 + lai), thang);
+        alert("số tiền bạn phải trả là " + tienTra);
+    } else {
+        alert("bạn nhập nhầm rồi");
+    }
+
+</script>
+
+</body>
+</html>

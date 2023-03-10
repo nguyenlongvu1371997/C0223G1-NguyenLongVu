@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh_gia_dien</title>
+</head>
+<body>
+<script>
+    let dienTieuThu = prompt("nhập lượng điện tiêu thụ vào đây (kWh)");
+    if (dienTieuThu >= 0 && dienTieuThu <= 50) {
+        let tien = dienTieuThu * 1678;
+        alert("tiền điện là " + tien + " đồng");
+    } else if (dienTieuThu > 50 && dienTieuThu <= 100) {
+        let tien = dienTieuThu * 1734;
+        alert("tiền điện là " + tien + " đồng");
+    } else if (dienTieuThu > 100 && dienTieuThu <= 200) {
+        let tien = dienTieuThu * 2014;
+        alert("tiền điện là " + tien + " đồng");
+    } else if (dienTieuThu > 200 && dienTieuThu <= 300) {
+        let tien = dienTieuThu * 2536;
+        alert("tiền điện là " + tien + " đồng");
+    } else if (dienTieuThu > 300 && dienTieuThu <= 400) {
+        let tien = dienTieuThu * 2834;
+        alert("tiền điện là " + tien + " đồng");
+    } else if (dienTieuThu > 400) {
+        let tien = dienTieuThu * 2927;
+        alert("tiền điện là " + tien + " đồng");
+    } else
+        alert("bạn nhập nhầm rồi");
+</script>
+
+</body>
+</html>

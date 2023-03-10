@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem_tra_a_b_c</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập a")*1;
+    let b = prompt("nhập b")*1;
+    let c = prompt("nhập c")*1;
+    if (a>0&&b>0&&c>0) {
+        if (a + b > c && b + c > a && a + c > b) {
+            alert("đây là 3 cạnh của một hình tam giác");
+        } else {
+            alert("đây không phải là 3 cạnh của một hình tam giác");
+        }
+    } else {
+        alert("đây không phải là 3 cạnh của một hình tam giác");
+    }
+</script>
+</body>
+</html>
