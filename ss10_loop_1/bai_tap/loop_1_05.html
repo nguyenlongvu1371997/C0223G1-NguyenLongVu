@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh_tong</title>
+</head>
+<body>
+<p id="tong"></p>
+<script>
+    let a=1;
+    let b=1;
+    let sum = 2;
+    for(let count = 1; count<19; count++) {
+        a+=b;
+        b=a-b;
+        sum+=a;
+    }
+    document.getElementById("tong").innerText="Tổng của 20 số đầu trong dãy Fibonacci là: "+(sum);
+</script>
+</body>
+</html>

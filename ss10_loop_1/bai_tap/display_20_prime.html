@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display_20_prime</title>
+</head>
+<body>
+<p id="soNguyenTo"></p>
+<script>
+    let number = 2;
+    let isPrime = true;
+    let count = 0;
+    let hienThi = "";
+    while (count < 20) {
+        if (number == 2 || number == 3) {
+            hienThi += number + "<br>"
+            count++;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                hienThi += number + "<br>";
+                count++;
+            }
+        }
+        number++;
+        isPrime = true;
+    }
+    document.getElementById("soNguyenTo").innerHTML = (hienThi)
+
+</script>
+
+</body>
+</html>

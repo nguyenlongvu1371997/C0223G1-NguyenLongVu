@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hien_thi_so_day_fibonacci</title>
+</head>
+<body>
+<h2>20 số trong dãy Fibonacci</h2>
+<p id="daySoFibonacci"></p>
+<script>
+    let daySo = "1" + "<br>" + "1" + "<br>";
+    let a = 1;
+    let b = 1;
+    for (let count = 1; count < 19; count++) {
+        a += b;
+        b = a - b;
+        daySo += a + "<br>"
+        document.getElementById("daySoFibonacci").innerHTML = daySo;
+    }
+
+
+</script>
+
+</body>
+</html>

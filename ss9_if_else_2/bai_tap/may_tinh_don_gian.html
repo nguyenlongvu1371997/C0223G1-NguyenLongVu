@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>may_tinh_co_ban</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td colspan="4"><input type="text" id="nhapso"></td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so1()">1</button>
+        </td>
+        <td>
+            <button onclick="so2()">2</button>
+        </td>
+        <td>
+            <button onclick="so3()">3</button>
+        </td>
+        <td>
+            <button onclick="cong()">+</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so4()">4</button>
+        </td>
+        <td>
+            <button onclick="so5()">5</button>
+        </td>
+        <td>
+            <button onclick="so6()">6</button>
+        </td>
+        <td>
+            <button onclick="tru()">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="so7()">7</button>
+        </td>
+        <td>
+            <button onclick="so8()">8</button>
+        </td>
+        <td>
+            <button onclick="so9()">9</button>
+        </td>
+        <td>
+            <button onclick="nhan()">x</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button onclick="xoa()">C</button>
+        </td>
+        <td>
+            <button onclick="so0()">0</button>
+        </td>
+        <td>
+            <button onclick="bang()">=</button>
+        </td>
+        <td>
+            <button onclick="chia()">/</button>
+        </td>
+    </tr>
+</table>
+<script>
+    function so1() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 1;
+    }
+
+    function so2() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 2;
+    }
+
+    function so3() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 3;
+    }
+
+    function so4() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 4;
+    }
+
+    function so5() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 5;
+    }
+
+    function so6() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 6;
+    }
+
+    function so7() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 7;
+    }
+
+    function so8() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 8;
+    }
+
+    function so9() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 9;
+    }
+
+    function cong() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + "+";
+    }
+
+    function tru() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + "-";
+    }
+
+    function nhan() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + "*";
+    }
+
+    function chia() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + "/";
+    }
+
+    function so0() {
+        document.getElementById("nhapso").value = document.getElementById("nhapso").value + 0;
+    }
+
+    function xoa() {
+        document.getElementById("nhapso").value = "";
+    }
+
+    function bang() {
+        document.getElementById("nhapso").value = eval(document.getElementById("nhapso").value);
+    }
+</script>
+
+</body>
+</html>

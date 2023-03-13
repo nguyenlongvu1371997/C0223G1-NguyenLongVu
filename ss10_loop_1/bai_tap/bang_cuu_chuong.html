@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bang_cuu_chuong</title>
+</head>
+<body>
+<h1>BẢNG CỬU CHƯƠNG</h1>
+<p id="giDo"></p>
+<script>
+    let i = 1;
+    let table = "<table border='1' cellspacing='0' cellpadding='5' width='700'>";
+    for (; i <= 9; i++) {
+        table += "<tr>"
+        for (let j = 2; j <= 9; j++) {
+            table += "<td>" + j + "x" + i + "=" + i * j + "</td>"
+        }
+        table += "</tr>"
+    }
+    table += "</table>"
+    document.getElementById("giDo").innerHTML = table;
+</script>
+
+</body>
+</html>

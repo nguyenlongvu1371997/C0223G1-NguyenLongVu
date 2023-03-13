@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chia_het_cho_5</title>
+</head>
+<p id="soNaoDo"></p>
+<body>
+<script>
+    let a=1;
+    let b=1;
+    while(a%5!=0) {
+        a += b;
+        b = a - b;
+    }
+      document.getElementById("soNaoDo").innerText="Số đầu tiên của dãy Fibonacci chia hết cho 5 là "+(a);
+</script>
+
+</body>
+</html>
