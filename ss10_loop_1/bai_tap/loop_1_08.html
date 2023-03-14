@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doan_xem</title>
+</head>
+<body>
+<button onclick="doanXem()">Chơi</button>
+<script>
+    function doanXem() {
+        let so = prompt("nhập khoảng bạn muốn đoán");
+        let soDoan = Math.floor(Math.random() * so);
+        let doan = prompt("nhập số bạn muốn đoán");
+        if (doan != soDoan) {
+            for (count = 0; count < 3; count++) {
+                let doanLai = prompt("nhập sai rồi nhập lại đi");
+                if (doanLai == soDoan) {
+                    alert("bạn đoán đúng rồi")
+                    break
+                }
+            }
+            alert("game over");
+        } else {
+            alert("bạn giỏi vlll")
+        }
+
+
+    }
+</script>
+
+</body>
+</html>

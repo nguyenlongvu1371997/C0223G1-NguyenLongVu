@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hinh_chu_nhat</title>
+</head>
+<body>
+<p id="hinhChuNhat"></p>
+<script>
+    let chuNhat = "";
+
+    for (let sao = 1; sao <= 30; sao++) {
+        chuNhat +="*";
+    }
+    chuNhat += "<br>";
+    for (let hang = 0; hang < 6; hang++) {
+        chuNhat+="*";
+        for (cach=1; cach<=28;cach++) {
+            chuNhat+="&nbsp;&nbsp;"
+        }
+        chuNhat+="*";
+        chuNhat+="<br>"
+    }
+    for (let sao = 1; sao <= 30; sao++) {
+        chuNhat += "*";
+    }
+    document.getElementById("hinhChuNhat").innerHTML=(chuNhat);
+</script>
+
+</body>
+</html>

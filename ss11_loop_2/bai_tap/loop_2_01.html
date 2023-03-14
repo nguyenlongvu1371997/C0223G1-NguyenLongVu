@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>in_day_Fibonacci</title>
+</head>
+<body>
+<input id="nhapSo" type="number">
+<button onclick="hienDaySo()" >Action</button>
+<p id="ketQua"></p>
+<script>
+    function hienDaySo() {
+        let soGiDo = document.getElementById("nhapSo").value;
+        let a = 1;
+        let b = 0;
+        let displayDaySo = "0" + "<br>" + "1" + "<br>";
+        for (let count = 2; count < soGiDo; count++) {
+            a += b;
+            b = a - b;
+            displayDaySo += a + "<br>";
+
+        }
+                document.getElementById("ketQua").innerHTML = (displayDaySo);
+
+    }
+</script>
+
+
+</body>
+</html>

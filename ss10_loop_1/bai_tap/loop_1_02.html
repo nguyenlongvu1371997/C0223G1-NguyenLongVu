@@ -8,14 +8,17 @@
 <script>
     do {
         var a = prompt("nhập nhiệt độ");
+        if (a >= 100) {
+            alert("nóng quá, hạ nhiệt đi");
+        } else if (a<=20) {
+            alert("lạnh quá tăng nhiệt nào");
+        }
+        else {
+            alert("nhiệt độ bình thường");
+            break;
+        }
     }
-    while (a <= 100 && a >= 20);
-    if (a >= 100) {
-        alert("nóng quá, hạ nhiệt đi");
-    } else {
-        alert("lạnh quá tăng nhiệt nào");
-    }
+    while (a<=20||a>=100);
 </script>
-
 </body>
 </html>

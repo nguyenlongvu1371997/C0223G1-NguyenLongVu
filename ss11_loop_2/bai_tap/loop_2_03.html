@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tam_giac_vuong</title>
+</head>
+<body>
+<p id="tamGiac1"></p>
+<p id="tamGiac2"></p>
+<p id="tamGiac3"></p>
+<p id="tamGiac4"></p>
+<script>
+    let tamGiac01 = "";
+    let tamGiac02 = "";
+    let tamGiac03 = "";
+    let tamGiac04 = "";
+    for (let hang = 1; hang < 6; hang++) {
+        for (let sao = 1; sao <= hang; sao++) {
+            tamGiac01 += "*"
+        }
+        tamGiac01 += "<br>"
+    }
+    document.getElementById("tamGiac1").innerHTML = (tamGiac01);
+    for (let hang = 5; hang > 0; hang--) {
+        for (let sao = 1; sao <= hang; sao++) {
+            tamGiac02 += "*";
+        }
+        tamGiac02 += "<br>";
+    }
+    document.getElementById("tamGiac2").innerHTML = (tamGiac02);
+    for (let hang = 1; hang < 6; hang++) {
+        for (let cach = 4; cach >= hang; cach--) {
+            tamGiac03 += "&nbsp;&nbsp;";
+        }
+        for (let sao = 1; sao <= hang; sao++) {
+            tamGiac03 += "*";
+        }
+        tamGiac03 += "<br>"
+    }
+    document.getElementById("tamGiac3").innerHTML = (tamGiac03);
+    for (let hang = 1; hang < 6; hang++) {
+        for (let cach = 1; cach < hang; cach++) {
+            tamGiac04 += "&nbsp;&nbsp;";
+        }
+        for (let sao = 5; sao >= hang; sao--) {
+            tamGiac04 += "*";
+        }
+        tamGiac04 += "<br>";
+    }
+    document.getElementById("tamGiac4").innerHTML = (tamGiac04);
+</script>
+</body>
+</html>
