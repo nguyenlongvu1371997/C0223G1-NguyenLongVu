@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array_1_02</title>
+</head>
+<body>
+<script>
+    var mangGiDo = [1, 12, 8, 100, -99, -3, 0, 1, 2, 5, 78, 101, 10];
+    var biggestNumber = mangGiDo[0];
+    var viTri = 0;
+    for (let i = 1; i < mangGiDo.length; i++) {
+        if (mangGiDo[i] > biggestNumber) {
+            biggestNumber = mangGiDo[i];
+            viTri = i;
+        }
+    }
+       alert("số lớn nhất là: " + biggestNumber + " có vị trí là " + viTri);
+</script>
+</body>
+</html>

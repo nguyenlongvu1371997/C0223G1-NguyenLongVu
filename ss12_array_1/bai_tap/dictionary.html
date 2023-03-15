@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dictionary</title>
+</head>
+<body>
+<script>
+    let giaTri = true;
+    var english = ["car", "bike", "plane", "ship"];
+    var vietNam = ["xe ô tô", "xe đạp", "máy bay", "tàu"];
+    let nhap = prompt("nhập từ tiếng Anh bạn cần tra");
+    for (var i = 0; i < english.length; i++) {
+        if (nhap == english[i]) {
+            giaTri = false;
+            alert("nghĩa của từ này là: " + vietNam[i]);
+            break;
+        }
+    }
+    if (giaTri == true) {
+        alert("can not found");
+    }
+</script>
+
+</body>
+</html>

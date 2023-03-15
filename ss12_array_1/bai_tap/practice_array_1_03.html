@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array_1_03</title>
+</head>
+<body>
+<script>
+    var mangGiDo = [1, 12, 8, 100, -99, -3, 0, 1, 2, 5, 78, 101, 10];
+    var biggestNumber = mangGiDo[0];
+    var tong = mangGiDo[0] * 1;
+    for (i = 1; i < mangGiDo.length; i++) {
+        if (mangGiDo[i] > biggestNumber) {
+            biggestNumber = mangGiDo[i];
+        }
+        tong += (mangGiDo[i] * 1);
+    }
+    let trungBinh = tong / i;
+    alert("Giá trị lớn nhất là: " + biggestNumber + " và trung bình các phần từ là: " + trungBinh);
+</script>
+
+</body>
+</html>

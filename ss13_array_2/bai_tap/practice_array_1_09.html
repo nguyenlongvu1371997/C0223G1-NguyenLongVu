@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array_1_09</title>
+</head>
+<body>
+<script>
+    let arrayA=[];
+    let arrayB=[];
+    let arrayC=[];
+    for(let i=0;i<10;i++){
+        let phanTuA=prompt("nhập phần tử mảng A: ");
+        arrayA.push(phanTuA);
+    }
+    for(let i=0;i<10;i++) {
+        let phanTuB = prompt("nhập phần tử mảng B: ");
+        arrayB.push(phanTuB);
+    }
+    for(let i=0;i<10;i++) {
+        arrayC.push(arrayA[i]);
+    }
+    for (let i=0;i<10;i++) {
+        arrayC.push(arrayB[i]);
+    }
+    alert("phần tử mảng C là:  "+arrayC);
+
+</script>
+</body>
+</html>
