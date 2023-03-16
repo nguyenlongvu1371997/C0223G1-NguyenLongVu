@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>array_2_03</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập mảng kí tự vào đây");
+    count = 0;
+    for (i = 0; i < a.length; i++) {
+        for (j = 0; j <= 9; j++) {
+            if (a[i] == j) {
+                count++
+                break;
+            }
+        }
+    }
+    alert("kích thước của mảng là: " + a.length + " và số kí tự số là: " + count);
+</script>
+
+</body>
+</html>

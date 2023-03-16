@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caro_chess</title>
+</head>
+<body>
+<p id="display"></p>
+<script>
+  let array = new Array(10);
+  for (let i = 0; i < 10; i++) {
+    array[i] = new Array(10);
+    for (let j = 0; j < 10; j++) {
+      array[i][j] = []
+    }
+  }
+  display();
+
+  function display() {
+    let banCo = '<table border="1">';
+    for (let i = 0; i < 10; i++) {
+      banCo += '<tr>'
+      for (let j = 0; j < 10; j++) {
+        banCo += '<td onclick="choi(' + i + ',' + j + ')" style="width: 25px; height: 25px" align="center">' + array[i][j] + '</td>';
+      }
+      '</tr>'
+    }
+    '</table>'
+    document.getElementById("display").innerHTML = banCo;
+  }
+  player1=true;
+  function choi(i, j) {
+    if (player1) {
+        array[i][j] = "X";
+        player1=false;
+  } else{
+      array[i][j] = "0";
+      player1=true;
+    }
+    display();
+  }
+
+</script>
+</body>
+</html>
