@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_05</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào số đầu tiên: ");
+    let b = prompt("nhập vào số thứ hai: ");
+    let c = prompt("nhập vào số thứ ba: ");
+    minValue(a, b, c);
+
+    function minValue(number1, number2, number3) {
+        let min = number1;
+        if (number1 > number2) {
+            min = number2;
+            if (number2 > number3) {
+                min = number3
+            }
+        } else if (number1 > number3) {
+            min = number3
+        }
+        return min
+    }
+
+    alert(minValue(a, b, c));
+</script>
+</body>
+</html>

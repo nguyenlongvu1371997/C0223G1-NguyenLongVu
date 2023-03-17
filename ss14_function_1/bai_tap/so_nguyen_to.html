@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>so_nguyen_to</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số cần kiểm tra: ");
+
+    soNguyenTo(n);
+
+    function soNguyenTo(number) {
+        let giaTri = true;
+        if (number <= 1) {
+            alert("đây không phải là số nguyên tố");
+        }else {
+            for (let i = 2; i < number; i++) {
+                if (number % i == 0) {
+                    alert("đây không phải là số nguyên tố");
+                    giaTri = false;
+                    break;
+                }
+            }
+            if (giaTri) {
+                alert("đây là số nguyên tố");
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

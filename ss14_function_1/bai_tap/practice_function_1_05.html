@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_1_05</title>
+</head>
+<body>
+<script>
+    let nhapSao = prompt("nhập sao bạn muốn tìm (nhớ viết hoa chữ cái đầu tên sao nha)");
+    timSao(nhapSao);
+
+    function timSao(sao) {
+        let ngoiSao = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        let chomSao = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        let findStar = true;
+        for (let i = 0; i < ngoiSao.length; i++) {
+            if (sao == ngoiSao[i]) {
+                alert("ngôi sao này thuộc chòm sao:" + chomSao[i]);
+                findStar = false
+                break
+            }
+        }
+        if (findStar) {
+            alert("không tìm thấy sao");
+        }
+    }
+</script>
+</body>
+</html>

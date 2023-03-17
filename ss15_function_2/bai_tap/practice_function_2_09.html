@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_09</title>
+</head>
+<body>
+<script>
+    let arr = prompt("nhập mảng kí tự");
+    let a = prompt("nhập kí tự bạn muốn tìm");
+    timKiTu(arr, a);
+    if (timKiTu(arr, a) == 0) {
+        alert("kí tự không có trong mảng");
+    } else {
+        alert("kí tự xuất hiên trong mảng " + timKiTu(arr, a) + " lần");
+    }
+
+    function timKiTu(array, kiTu) {
+        let count = 0;
+        for (i = 0; i < array.length; i++) {
+            if (kiTu == array[i]) {
+                count++;
+            }
+        }
+        return count;
+    }
+</script>
+</body>
+</html>

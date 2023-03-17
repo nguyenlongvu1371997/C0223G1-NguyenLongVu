@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_1_03</title>
+</head>
+<body>
+<script>
+    let a = +prompt("nhập số thứ nhất vào: ");
+    let b = +prompt("nhập số thứ hai vào: ");
+    hamGiDo(a, b);
+
+    function hamGiDo(number1, number2) {
+        if (number1 > number2) {
+            alert("số thứ nhất lớn hơn số thứ hai");
+        } else {
+            let tong = number1 + number2;
+            alert("tổng của 2 số là: " + tong);
+            return tong;
+        }
+    }
+</script>
+</body>
+</html>

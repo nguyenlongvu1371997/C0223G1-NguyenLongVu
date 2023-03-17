@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_04</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập kí tự cần kiểm tra");
+    kiemTra(a);
+
+    function kiemTra(giDo) {
+        let a = ('0123456789');
+        giaTri = true;
+        for (i = 0; i < a.length; i++) {
+            if (giDo == a[i]) {
+                giaTri = false;
+                break;
+            }
+        }
+        return giaTri
+    }
+    if (kiemTra(a)) {
+        alert("đó không phải là kí tự số");
+    } else {
+        alert("đó là giá trị số");
+    }
+</script>
+</body>
+</html>

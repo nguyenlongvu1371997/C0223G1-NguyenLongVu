@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_07</title>
+</head>
+<body>
+<script>
+    let array1 = new Array(1);
+    let array2 = new Array(1);
+    array1[0] = prompt("nhập số thứ nhất");
+    array2[0] = prompt("nhập số thứ hai");
+    doiCho(array1, array2);
+    alert(array1);
+    alert(array2);
+
+    function doiCho(number1, number2) {
+        let nguoiThuBa = number1[0];
+        number1[0] = number2[0];
+        number2[0] = nguoiThuBa;
+    }
+</script>
+</body>
+</html>

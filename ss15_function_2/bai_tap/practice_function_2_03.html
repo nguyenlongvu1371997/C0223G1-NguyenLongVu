@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_03</title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào số cần tính lũy thừa: ");
+    tinhLuyThua(a);
+
+    function tinhLuyThua(number) {
+        luyThua = 1;
+        for (i = 1; i <= number; i++) {
+            luyThua *= i;
+        }
+        alert("Lũy thừa của số bạn nhập là: " + luyThua);
+    }
+</script>
+</body>
+</html>

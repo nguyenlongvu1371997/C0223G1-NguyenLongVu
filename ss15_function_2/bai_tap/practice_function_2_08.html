@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function_2_08</title>
+</head>
+<body>
+<script>
+    let n = prompt("nhập số lượng phần tử bạn muốn nhập vào mảng");
+    let array = [];
+    for (i = 1; i <= n; i++) {
+        let a = prompt("nhập vào phần tử thứ " + i);
+        array.push(a);
+    }
+    daoNguoc(array);
+    alert(array);
+
+    function daoNguoc(giDo) {
+        giDo.reverse();
+    }
+</script>
+
+</body>
+</html>
