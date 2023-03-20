@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>product_management</title>
+</head>
+<body>
+<input id="product" value="new product"><button onclick="addProduct()">ADD</button><br>
+<p id="productList"></p>
+
+<script>
+    let array = ['Điện thoại', 'Laptop', 'Máy tính'];
+    display()
+
+    function display() {
+        let tableString = '<table border="1">';
+        tableString += '<tr>';
+        tableString += '<th>STT</th>';
+        tableString += '<th>Tên Sản Phẩm</th>';
+        tableString += '<th></th>';
+        tableString += '<th></th>';
+        tableString += '</tr>';
+        for (i = 0; i < array.length; i++) {
+            tableString += '<tr>';
+            tableString += '<td>' + (i + 1) + '</td>';
+            tableString += '<td>' + array[i] + '</td>';
+            tableString += '<td><button onclick="editProduct(' + i + ')">Sửa</button></td>';
+            tableString += '<td><button onclick="deleteProduct(' + i + ')">Xóa</button></td>';
+            tableString += '</tr>';
+        }
+        '</table>'
+        document.getElementById("productList").innerHTML = tableString;
+    }
+
+    function addProduct() {
+        let a = document.getElementById("product").value;
+        array.push(a);
+        display();
+    }
+
+    function deleteProduct(index) {
+        let a = confirm("bạn muốn xóa chứ");
+        if (a) {
+            array.splice(index, 1);
+            display();
+        }
+    }
+
+    function editProduct(index) {
+        let name = prompt("nhập tên bạn muốn sửa");
+        array[index] = name;
+        display();
+    }
+
+
+</script>
+</body>
+</html>

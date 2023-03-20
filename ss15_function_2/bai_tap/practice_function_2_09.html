@@ -9,8 +9,8 @@
     let arr = prompt("nhập mảng kí tự");
     let a = prompt("nhập kí tự bạn muốn tìm");
     timKiTu(arr, a);
-    if (timKiTu(arr, a) == 0) {
-        alert("kí tự không có trong mảng");
+    if (timKiTu(arr, a) == -1) {
+        alert(timKiTu(arr, a));
     } else {
         alert("kí tự xuất hiên trong mảng " + timKiTu(arr, a) + " lần");
     }
@@ -22,7 +22,11 @@
                 count++;
             }
         }
-        return count;
+        if (count == 0) {
+            return -1;
+        } else {
+            return count;
+        }
     }
 </script>
 </body>
