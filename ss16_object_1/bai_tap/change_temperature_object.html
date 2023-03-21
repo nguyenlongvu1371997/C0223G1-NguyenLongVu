@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>change_temperature</title>
+</head>
+<body>
+<input type="number" value="25" id="temperature"> độ C
+<button onclick="changeTemperature()">Change</button>
+<p id="f"></p>
+<p id="kenvin"></p>
+<script>
+    class temperature {
+        constructor(t) {
+            this.t = t;
+        }
+
+        toF() {
+            let f = this.t * 9 / 5 + 32;
+            return f;
+        }
+
+        toKenvin() {
+            let k = this.t + 273.15;
+            return k;
+        }
+    }
+
+    function changeTemperature() {
+        let t = +document.getElementById("temperature").value;
+        let a = new temperature(t);
+        if (t < -273) {
+            alert("nhập lại nhiệt độ đi");
+        } else {
+            document.getElementById("f").innerText = (a.toF() + " độ F");
+            document.getElementById("kenvin").innerText = (a.toKenvin() + " độ Kenvin");
+        }
+    }
+</script>
+</body>
+</html>
