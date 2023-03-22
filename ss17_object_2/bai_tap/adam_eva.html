@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>adam_eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+
+        }
+
+        isEmpty() {
+            if (this.weight <= 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            if (this.isEmpty()) {
+
+            } else {
+                this.weight--;
+            }
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender == 'male') {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(Apple) {
+            if (Apple.isEmpty()) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        eat(Apple) {
+            if (this.checkApple(Apple)) {
+                this.weight++;
+                Apple.decrease();
+            }
+        }
+
+        say(string) {
+            console.log(string);
+        }
+
+    }
+    let vu = new Human("Vũ", 'male', 75);
+    let nyVu = new Human("ny Vũ", 'female', 55);
+    let tao = new Apple(10);
+    nyVu.say("Vũ đẹp trai quá");
+    vu.say("rõ ràng");
+    nyVu.eat(tao);
+    vu.eat(tao);
+    console.log(vu.weight)
+    console.log(nyVu.weight)
+    console.log(tao.weight)
+</script>
+</body>
+</html>

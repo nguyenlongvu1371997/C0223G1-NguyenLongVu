@@ -11,7 +11,7 @@ Chu vi hình chữ nhật là: <p id="perimeterRectangle"></p><br>
 Diện tích hình chữ nhật là: <p id="areaRectangle"></p>
 
 <script>
-    class rectangle {
+    class Rectangle {
         constructor(length, width) {
             this.length = length;
             this.width = width;
@@ -43,7 +43,7 @@ Diện tích hình chữ nhật là: <p id="areaRectangle"></p>
 
     let someThing = new Array(1);
 
-    someThing[0] = new rectangle(100, 50);
+    someThing[0] = new Rectangle(100, 50);
     someThing[0].draw();
     document.getElementById("perimeterRectangle").innerText=(someThing[0].perimeter());
     document.getElementById("areaRectangle").innerText=(someThing[0].area());

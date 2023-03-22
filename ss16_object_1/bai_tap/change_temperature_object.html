@@ -10,7 +10,7 @@
 <p id="f"></p>
 <p id="kenvin"></p>
 <script>
-    class temperature {
+    class Temperature {
         constructor(t) {
             this.t = t;
         }
@@ -28,7 +28,7 @@
 
     function changeTemperature() {
         let t = +document.getElementById("temperature").value;
-        let a = new temperature(t);
+        let a = new Temperature(t);
         if (t < -273) {
             alert("nhập lại nhiệt độ đi");
         } else {
