@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_2_2</title>
+</head>
+<body>
+<p id="tamGiacCan"></p>
+<script>
+    let tamGiac = "";
+    let h = +prompt("nhập chiều cao tam giác");
+    for (let i = 1; i <= h; i++) {
+        for (let j = 1; j <= (h * 2 - 1); j++) {
+            if (j < (h - i + 1) || j > (h + i - 1)) {
+                tamGiac += '&nbsp&nbsp';
+            } else {
+                tamGiac += '*';
+            }
+        }
+        tamGiac += '<br>'
+    }
+    document.getElementById("tamGiacCan").innerHTML = tamGiac;
+
+</script>
+</body>
+</html>

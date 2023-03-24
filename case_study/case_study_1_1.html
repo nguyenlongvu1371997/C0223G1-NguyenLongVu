@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_1_1</title>
+</head>
+<body>
+<script>
+    let salary = prompt("nhập lương bạn vào đây: ");
+    if (salary < 7000000 && salary > 0) {
+        let tax = salary * 5 / 100;
+        let money = salary - tax;
+        alert("thuế thu nhập của bạn là: " + tax);
+        alert("lương bạn được nhận là: " + money);
+    } else if (salary < 15000000 && salary >= 7000000) {
+        let tax = salary * 10 / 100;
+        let money = salary - tax;
+        alert("thuế thu nhập của bạn là: " + tax);
+        alert("lương bạn được nhận là: " + money);
+    } else if (salary >= 15000000) {
+        let tax = salary * 20 / 100;
+        let money = salary - tax;
+        alert("thuế thu nhập của bạn là: " + tax);
+        alert("lương bạn được nhận là: " + money);
+    } else {
+        alert("bạn nhập lại đi");
+    }
+</script>
+</body>
+</html>

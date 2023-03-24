@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_3_2</title>
+</head>
+<body>
+<script>
+    let A = [7, 2, 5, 3, 5, 3];
+    let B = [7, 2, 5, 4,4,4,6, 6,6, 3, 5, 3];
+    let missingValue = [];
+    for (let i = 0; i < B.length; i++) {
+        for (let j = 0; j < A.length; j++) {
+            if (B[i] == A[j]) {
+                break;
+            } else if (j == A.length - 1 && B[i] != A[A.length - 1]) {
+                missingValue.push(B[i]);
+            }
+        }
+    }
+    for( let i=0;i<missingValue.length;i++){
+        for(let j=i+1;j<missingValue.length;j++){
+            if(missingValue[j]==missingValue[i]){
+                missingValue.splice(j,1);
+                j--;
+            }
+        }
+    }
+    alert(missingValue);
+
+</script>
+</body>
+</html>

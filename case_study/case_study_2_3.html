@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_2_3</title>
+</head>
+<body>
+<p id="tamGiacCanRong"></p>
+<script>
+    let tamGiac = "";
+    let h = +prompt("nhập chiều cao tam giác");
+    for (let i = 1; i <= h; i++) {
+        if (i == h) {
+            for (let k = 1; k <= (h * 2 - 1); k++) {
+                tamGiac += '*';
+            }
+        } else {
+
+            for (let j = 1; j <= (h * 2 - 1); j++) {
+                if (j == (h - i + 1) || j == (h + i - 1)) {
+                    tamGiac += '*';
+                } else {
+                    tamGiac += '&nbsp&nbsp';
+                }
+            }
+        }
+        tamGiac += '<br>';
+    }
+    document.getElementById("tamGiacCanRong").innerHTML = tamGiac;
+
+</script>
+</body>
+</html>
