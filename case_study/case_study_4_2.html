@@ -6,28 +6,22 @@
 </head>
 <body>
 <script>
-    let s = new Array["abc123abc123"];
+    let s = "abc123abc123";
+    let arr = Array.from(s);
+    countCharacters(arr);
 
-    alert(s)
-    // countCharacters(s);
+    function countCharacters(arr) {
+        for (let i = 0; i < arr.length - 1; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    arr.splice(j, 1);
+                    j--;
+                }
+            }
+        }
+        alert("có " + arr.length + " kí tự khác nhau là: " + arr);
+    }
 
-
-    // function countCharacters(arr) {
-    //     for (let i = 0; i < ar.length - 1; i++) {
-    //         for (let j = i + 1; j < arr.length; j++) {
-    //             if ( arr[i] == arr[j] ) {
-    //                 arr.splice(j, 1);
-    //                 j--;
-    //             }
-    //         }
-    //     }
-    //     alert(arr)
-    //
-    //
-    // }
-
-
-    // alert(countCharacters(s));
 </script>
 </body>
 </html>

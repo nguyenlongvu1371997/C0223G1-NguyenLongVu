@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_5_1</title>
+</head>
+<body>
+<script>
+    let m = prompt("nhập kích thước ma trận: ");
+    let n = prompt("nhập kích thước ma trận: ");
+    let arr = new Array(m);
+    for (let i = 0; i < m; i++) {
+        arr[i] = new Array(n);
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = +prompt("nhập phần tử thứ: " + i + ", " + j);
+        }
+    }
+    alert(sumArray(arr));
+
+    function sumArray(arr) {
+        let sum = 0;
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (arr[i][j] % 2 == 0) {
+                    sum += arr[i][j];
+                }
+            }
+        }
+        return sum;
+    }
+</script>
+</body>
+</html>

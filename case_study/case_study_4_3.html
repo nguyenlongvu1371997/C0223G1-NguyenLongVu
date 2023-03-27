@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_4_3</title>
+</head>
+<body>
+<script>
+    let s1 = "aabcc";
+    let s2 = "adcaa";
+    let arr1 = Array.from(s1);
+    let arr2 = Array.from(s2);
+    commonCharacterCount(arr1, arr2);
+
+    function commonCharacterCount(arr1, arr2) {
+        let count = 0;
+        for (let i = 0; i < arr1.length; i++) {
+            for (let j = 0; j < arr2.length; j++) {
+                if (arr1[i] == arr2[j]) {
+                    count++;
+                    arr2.splice(j, 1);
+                    break;
+                }
+
+            }
+        }
+        alert("số kí tự giống nhau là: " + count);
+    }
+</script>
+</body>
+</html>

@@ -6,14 +6,31 @@
 </head>
 <body>
 <script>
-    let string = ("NgUyen lOng  vU");
+    let string = ("NgUyen lOng    vU");
+    alert(chuanHoa(string));
 
     function chuanHoa(string) {
-        alert(string.length)
+        let arr = string.split(' ')
+        let string2 = "";
+        for (let i = 0; i < arr.length; i++) {
+
+            if (arr[i] == '') {
+                arr.splice(i, 1);
+                i--;
+
+            } else {
+                let arr1 = arr[i].toLowerCase();
+                let arr2 = Array.from(arr1);
+                arr2[0] = arr2[0].toUpperCase();
+                string2 += arr2.join('') + " ";
+            }
+
+        }
+        return string2;
 
     }
 
-    chuanHoa(string)
+
 </script>
 </body>
 </html>

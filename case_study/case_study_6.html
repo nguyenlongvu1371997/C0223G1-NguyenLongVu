@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>case_study_6</title>
+</head>
+<body>
+<button onclick="createStudent()">Thêm mới học viên</button>
+<button onclick="fixStudent()">Sửa thông tin học viên</button>
+<button onclick="deleteStudent()">Xóa học viên</button>
+<p id="studentInformation"></p>
+<script>
+    class Student {
+        constructor(ma, ten, lop, email, ngaySinh) {
+            this.ma = ma;
+            this.ten = ten;
+            this.lop = lop;
+            this.email = email;
+            this.ngaySinh = ngaySinh;
+        }
+    }
+
+    let student = []
+    student.push(new Student('HV001', 'Nguyễn Văn A', 'C0223G1', 'Adeptrai@gmail.com', '01/01/1997'))
+    student.push(new Student('HV002', 'Nguyễn Văn B', 'C0223G1', 'Bdeptrai@gmail.com', '01/01/1997'));
+    display(student);
+
+    function display(arr) {
+        let a = '<table border="1">' +
+            '<tr>' +
+            '<th>Mã học viên</th>' +
+            '<th>Tên</th>' +
+            '<th>Lớp</th>' +
+            '<th>Email</th>' +
+            '<th>Ngày sinh</th>' +
+            '</tr>';
+
+        for (let i = 0; i < arr.length; i++) {
+            a += '<tr>' +
+                '<td>' + arr[i].ma + '</td>' +
+                '<td>' + arr[i].ten + '</td>' +
+                '<td>' + arr[i].lop + '</td>' +
+                '<td>' + arr[i].email + '</td>' +
+                '<td>' + arr[i].ngaySinh + '</td>' +
+                '</tr>';
+        }
+        a += '</table>';
+        document.getElementById("studentInformation").innerHTML = a;
+    }
+
+    function createStudent() {
+        let ma = prompt("nhập mã học viên: ");
+        let ten = prompt("nhập họ và tên học viên: ");
+        let lop = prompt("nhập lớp học viên: ");
+        let email = prompt("nhập email học viên: ");
+        let ngaySinh = prompt("nhập ngày tháng năm sinh học viên: ");
+        student.push(new Student(ma, ten, lop, email, ngaySinh));
+        display(student);
+
+    }
+
+    function fixStudent() {
+        let fix = prompt("nhập mã học viên bạn muốn sửa");
+        let unFind = true;
+        for (let i = 0; i < student.length; i++) {
+            if (fix == student[i].ma) {
+                student[i].ten = prompt("nhập tên mới: ");
+                student[i].lop = prompt("nhập lớp mới: ");
+                student[i].email = prompt("nhập email mới: ");
+                student[i].ngaySinh = prompt("nhập ngày sinh mới: ");
+                unFind = false;
+            }
+        }
+        if (unFind) {
+            alert("không có mã học viên");
+        }
+        display(student);
+    }
+
+    function deleteStudent() {
+        let fix = prompt("nhập mã học viên bạn muốn xóa");
+        let unFind = true;
+        for (let i = 0; i < student.length; i++) {
+            if (fix == student[i].ma) {
+                student.splice(i, 1);
+                unFind = false;
+            }
+        }
+        if (unFind) {
+            alert("không có mã học viên");
+        }
+        display(student);
+    }
+
+</script>
+</body>
+</html>
