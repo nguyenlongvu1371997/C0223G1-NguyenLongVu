@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bonus_3</title>
+</head>
+<body>
+<script>
+    let arr = [1, 13, 2, 3, 4, 5, 6, 7, 8, 9, 13];
+    alert(findFibonacci(arr));
+    alert(findFibonacci(arr).sort(function (a, b) {
+        return a - b;
+    }));
+
+    function findFibonacci(arr) {
+        let array = [];
+        for (let i = 0; i < arr.length; i++) {
+            let b = 1;
+            for (let a = 0; a <= arr[i];) {
+                if (a == arr[i]) {
+                    array.push(arr[i]);
+                    break;
+                } else {
+                    b += a;
+                    a = b - a;
+                }
+            }
+        }
+        return array;
+    }
+</script>
+</body>
+</html>

@@ -8,25 +8,26 @@
 <button onclick="createStudent()">Thêm mới học viên</button>
 <button onclick="fixStudent()">Sửa thông tin học viên</button>
 <button onclick="deleteStudent()">Xóa học viên</button>
-<p id="studentInformation"></p>
+<p id="tableInformation"></p>
+
 <script>
-    class Student {
-        constructor(ma, ten, lop, email, ngaySinh) {
-            this.ma = ma;
-            this.ten = ten;
-            this.lop = lop;
+    class Students {
+        constructor(code, name, level, email, birth) {
+            this.code = code;
+            this.name = name;
+            this.level = level;
             this.email = email;
-            this.ngaySinh = ngaySinh;
+            this.birth = birth;
         }
     }
 
-    let student = []
-    student.push(new Student('HV001', 'Nguyễn Văn A', 'C0223G1', 'Adeptrai@gmail.com', '01/01/1997'))
-    student.push(new Student('HV002', 'Nguyễn Văn B', 'C0223G1', 'Bdeptrai@gmail.com', '01/01/1997'));
+    let student = [];
+    student.push(new Students('HV_001', 'Nguyễn Văn A', 'C0223G1', 'Adeptrai@gmail.com', '01/01/1997'));
+    student.push(new Students('HV_002', 'Nguyễn Văn B', 'C0223G1', 'Bdeptrai@gmail.com', '01/01/2000'));
     display(student);
 
     function display(arr) {
-        let a = '<table border="1">' +
+        let table = '<table border="1">' +
             '<tr>' +
             '<th>Mã học viên</th>' +
             '<th>Tên</th>' +
@@ -34,64 +35,64 @@
             '<th>Email</th>' +
             '<th>Ngày sinh</th>' +
             '</tr>';
-
         for (let i = 0; i < arr.length; i++) {
-            a += '<tr>' +
-                '<td>' + arr[i].ma + '</td>' +
-                '<td>' + arr[i].ten + '</td>' +
-                '<td>' + arr[i].lop + '</td>' +
-                '<td>' + arr[i].email + '</td>' +
-                '<td>' + arr[i].ngaySinh + '</td>' +
-                '</tr>';
+            table += '<tr>';
+            table += '<td>' + arr[i].code + '</td>';
+            table += '<td>' + arr[i].name + '</td>';
+            table += '<td>' + arr[i].level + '</td>';
+            table += '<td>' + arr[i].email + '</td>';
+            table += '<td>' + arr[i].birth + '</td>';
+            table += '</tr>';
         }
-        a += '</table>';
-        document.getElementById("studentInformation").innerHTML = a;
+        table += '</table>';
+        document.getElementById("tableInformation").innerHTML = table;
     }
 
     function createStudent() {
-        let ma = prompt("nhập mã học viên: ");
-        let ten = prompt("nhập họ và tên học viên: ");
-        let lop = prompt("nhập lớp học viên: ");
+        let code = prompt("nhập mã học viên: ");
+        let name = prompt("nhập tên học viên: ");
+        let level = prompt("nhập lớp học viên: ");
         let email = prompt("nhập email học viên: ");
-        let ngaySinh = prompt("nhập ngày tháng năm sinh học viên: ");
-        student.push(new Student(ma, ten, lop, email, ngaySinh));
+        let birth = prompt("nhập ngày tháng năm sinh học viên: ");
+        student.push(new Students(code, name, level, email, birth));
         display(student);
-
     }
 
     function fixStudent() {
-        let fix = prompt("nhập mã học viên bạn muốn sửa");
-        let unFind = true;
+        let code = prompt("nhập mã học viên bạn muốn sửa");
+        cantFind = true;
         for (let i = 0; i < student.length; i++) {
-            if (fix == student[i].ma) {
-                student[i].ten = prompt("nhập tên mới: ");
-                student[i].lop = prompt("nhập lớp mới: ");
-                student[i].email = prompt("nhập email mới: ");
-                student[i].ngaySinh = prompt("nhập ngày sinh mới: ");
-                unFind = false;
+            if (student[i].code == code) {
+                student[i].name = prompt("nhập tên bạn muốn sửa: ");
+                student[i].level = prompt("nhập lớp bạn muốn sửa: ");
+                student[i].email = prompt("nhập email bạn muốn sửa: ");
+                student[i].birth = prompt("nhập ngày sinh bạn muốn sửa: ");
+                display(student);
+                cantFind = false;
             }
         }
-        if (unFind) {
+        if (cantFind) {
             alert("không có mã học viên");
         }
-        display(student);
     }
 
     function deleteStudent() {
-        let fix = prompt("nhập mã học viên bạn muốn xóa");
-        let unFind = true;
+        let code = prompt("nhập mã học viên bạn muốn xóa");
+        cantFind = true;
         for (let i = 0; i < student.length; i++) {
-            if (fix == student[i].ma) {
-                student.splice(i, 1);
-                unFind = false;
+            if (student[i].code == code) {
+                cantFind = false;
+                let comfirm = confirm("bạn chắc chưa ");
+                if (comfirm) {
+                    student.splice(i, 1);
+                    display(student);
+                }
             }
         }
-        if (unFind) {
+        if (cantFind) {
             alert("không có mã học viên");
         }
-        display(student);
     }
-
 </script>
 </body>
 </html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="createComputer()">thêm mới</button>
+<p id="display"></p>
+<script>
+    class Computer {
+        constructor(code, name, brand, price) {
+            this.code = code;
+            this.name = name;
+            this.brand = brand;
+            this.price = price;
+        }
+
+        getterCode() {
+            return this.code
+        }
+
+        setterCode() {
+            this.code = prompt("nhập code");
+        }
+
+        getterName() {
+            return this.name
+        }
+
+        setterName() {
+            this.name = prompt("nhập name");
+        }
+
+        getterBrand() {
+            return this.brand
+        }
+
+        setterBrand() {
+            this.brand = prompt("nhập brand");
+        }
+
+        getterPrice() {
+            return this.price
+        }
+
+        setterPrice() {
+            this.price = prompt("nhập price");
+        }
+
+        toString() {
+            return "code: " + this.code + "name: " + this.name + "brand: " + this.brand + "price: " + this.price;
+        }
+    }
+
+    let arr = [];
+    arr.push(new Computer('001', 'dell01', 'dell', 1500000));
+    arr.push(new Computer('002', 'dell02', 'dell', 1300000));
+
+
+    displayTable(arr);
+
+    function displayTable(arr) {
+        arr.sort(function (c1,c2){
+            return c1.price - c2.price;
+        })
+        let table1 = '<table border="1">' +
+            '<tr>' +
+            '<th>mã máy</th>' +
+            '<th>tên máy</th>' +
+            '<th>tên hãng</th>' +
+            '<th>giá bán</th>' +
+            '</tr>';
+
+        for (let i = 0; i < arr.length; i++) {
+            table1 += '<tr>';
+            table1 += '<td>' + arr[i].getterCode() + '</td>';
+            table1 += '<td>' + arr[i].getterName() + '</td>';
+            table1 += '<td>' + arr[i].getterBrand() + '</td>';
+            table1 += '<td>' + arr[i].getterPrice() + '</td>';
+            table1 += '</tr>';
+        }
+        table1 += '</table>';
+        document.getElementById("display").innerHTML = table1;
+    }
+
+    function createComputer() {
+        let code = prompt("nhập mã máy");
+        let name = prompt("nhập tên máy");
+        let brand = prompt("nhập hãng máy");
+        let price = +prompt("nhập giá máy");
+        arr.push(new Computer(code, name, brand, price));
+        displayTable(arr);
+    }
+</script>
+
+</body>
+</html>

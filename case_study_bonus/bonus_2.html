@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bonus_2</title>
+</head>
+<body>
+<script>
+    let string = prompt("nhập chuỗi vào ");
+    acronym(string);
+
+    function acronym(string) {
+        let arr = string.split(' ');
+
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] == "") {
+                arr.splice(i, 1);
+                i--;
+            }
+        }
+
+        let str = '';
+        if (arr.length == 1) {
+            alert("chuỗi chỉ có 1 từ nên không cần viết tắt");
+        } else {
+            for (let i = 0; i < arr.length; i++) {
+                let array = arr[i].split('');
+                str += array[0];
+            }
+            alert(str.toUpperCase());
+        }
+    }
+</script>
+</body>
+</html>

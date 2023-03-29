@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai_1</title>
+</head>
+<body>
+<script>
+    let n = '';
+    let arr = [];
+    let sum = 0;
+    let count = 0;
+    do {
+        n = prompt("nhập số phần tử bạn muốn");
+    } while (!(n <= 50 && n > 0));
+
+    for (let i = 0; i < n; i++) {
+        arr[i] = +prompt("nhập số của phần tử thứ " + i);
+    }
+    alert(arr);
+    for (let j = 0; j < n; j += 3) {
+        if (arr[j] % 5 == 0) {
+            sum += arr[j];
+            count++;
+        }
+    }
+    avg = sum / count;
+    alert("giá trị trung bình theo đề bài là: " + avg);
+
+</script>
+
+</body>
+</html>
